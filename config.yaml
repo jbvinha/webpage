@@ -64,7 +64,7 @@ params:
   socialInFooter: yes
   socialInHeader: no
   textFontFamily: sans-serif
-  theme: peach
+  theme: sky
   twitter: apreshill
   utterances:
     issue_term: pathname

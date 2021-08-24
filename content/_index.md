@@ -2,18 +2,15 @@
 action_label: Read More &rarr;
 action_link: /about
 action_type: text
-description: This is the documentation site for the Hugo Apéro theme. Inside it, you'll
-  find how to get started building a new site with this theme. You'll learn a bit
-  about Hugo, and a lot about what makes this theme unique and, we hope, fun to get
-  to know. Bon apéro!
+description: Hello, I am glad you are here! This is my personal webpage and I am very excited in starting to share public projects in data analytics with you on this space. Please feel free to explore the website and reach out for networking or to share your thoughts on the projects. Thank you!  
 image_left: false
 images:
-- img/isola.jpg
+- img/Selfie_Juliana.jpg
 show_action_link: true
 show_social_links: true
-subtitle: A Hugo theme you'll want to hang out with
+subtitle: Jr. Data Analyst
 text_align_left: true
-title: Hugo Apéro
+title: Juliana Vinha
 type: home
 ---
 

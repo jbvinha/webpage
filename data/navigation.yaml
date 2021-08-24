@@ -5,6 +5,6 @@ footer:
   - name: Contact
     title: Contact Form
     url: /contact/
-  - name: Contributors
-    title: Contributors
-    url: /contributors/
+#  - name: Contributors
+#    title: Contributors
+#    url: /contributors/

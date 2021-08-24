@@ -1,0 +1,47 @@
+---
+title: Combining Multiple Files
+author: 'Juliana Vinha'
+date: '2021-08-24'
+slug: []
+categories: []
+tags: []
+subtitle: ''
+excerpt: ''
+images: null
+series: null
+layout: single
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+
+# Merging multiple .csv files with the same headers into one data frame in R
+
+**loading libraries**
+
+```{r libraries, message=FALSE}
+library(dplyr)
+library(readr)
+library(tidyverse)
+```
+
+**To perform the analysis on the Bike Share study case, we were given 12 files, one for each month over the past 12 months. The first step taken in this analysis is combining the 12 files into one data set. From there, We will check data consistency and perform data cleaning.The code used to combine the multiples files into a data frame is described bellow.**
+
+***Read all data files***
+```{r read,eval = FALSE}
+df <- list.files(path="./data_input", full.names = TRUE) %>% 
+  lapply(read_csv)
+```
+
+***Combine all files into one.***
+```{r combine, eval=FALSE}
+df <- do.call(rbind.data.frame,df)
+```
+
+**As I have the intention to also conduct the data preparation and cleaning steps in Power BI, I have saved a copy of the combined files using the following function:** 
+
+```{r Export, eval=FALSE}
+#Export in csv
+write.csv(df,"./data_output/combined.csv", row.names = FALSE)
+```

@@ -1,0 +1,36 @@
+---
+title: Combining Multiple Files
+author: 'Juliana Vinha'
+date: '2021-08-24'
+slug: []
+categories: []
+tags: []
+subtitle: ''
+excerpt: ''
+images: null
+series: null
+layout: single
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<div id="merging-multiple-.csv-files-with-the-same-headers-into-one-data-frame-in-r" class="section level1">
+<h1>Merging multiple .csv files with the same headers into one data frame in R</h1>
+<p><strong>loading libraries</strong></p>
+<pre class="r"><code>library(dplyr)
+library(readr)
+library(tidyverse)</code></pre>
+<p><strong>To perform the analysis on the Bike Share study case, we were given 12 files, one for each month over the past 12 months. The first step taken in this analysis is combining the 12 files into one data set. From there, We will check data consistency and perform data cleaning.The code used to combine the multiples files into a data frame is described bellow.</strong></p>
+<p><strong><em>Read all data files</em></strong></p>
+<pre class="r"><code>df &lt;- list.files(path=&quot;./data_input&quot;, full.names = TRUE) %&gt;% 
+  lapply(read_csv)</code></pre>
+<p><strong><em>Combine all files into one.</em></strong></p>
+<pre class="r"><code>df &lt;- do.call(rbind.data.frame,df)</code></pre>
+<p><strong>As I have the intention to also conduct the data preparation and cleaning steps in Power BI, I have saved a copy of the combined files using the following function:</strong></p>
+<pre class="r"><code>#Export in csv
+write.csv(df,&quot;./data_output/combined.csv&quot;, row.names = FALSE)</code></pre>
+</div>
